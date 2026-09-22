@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,7 +37,7 @@ class ProfilePage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: const Color.fromARGB(255, 127, 163, 225),
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
               ),
               child: Row(
@@ -117,7 +118,181 @@ class ProfilePage extends StatelessWidget {
           ),
           Text(
             'Expert Android Developer',
-            style: TextStyle( fontWeight: FontWeight.bold, fontFamily: GoogleFonts.poppins().fontFamily),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontFamily: GoogleFonts.poppins().fontFamily,
+            ),
+          ),
+          SizedBox(height: 8),
+          Container(
+            padding: EdgeInsets.all(8.0),
+            width: 200,
+            decoration: BoxDecoration(
+              color: Colors.blueAccent,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(Icons.flutter_dash, size: 25),
+                SizedBox(width: 3.0),
+                Text(
+                  'Dart & Wigdet Learner',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Section 4
+          Container(
+            padding: EdgeInsets.all(8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              spacing: 4,
+              children: [
+                Expanded(
+                  child: Card(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Icon(Icons.widgets_outlined, color: Colors.blueAccent),
+                        Text(
+                          '12',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'Proyek',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Icon(
+                          Icons.check_circle_outline,
+                          color: Colors.blueAccent,
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          '45',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Latihan',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Icon(
+                          Icons.star_border_outlined,
+                          color: Colors.blueAccent,
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          '100',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Score',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // section 5
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Row(
+                  spacing: 10,
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            Colors.blueAccent,
+                          ),
+                        ),
+                        child: Container(
+                          child: Row(
+                            spacing: 2,
+                            children: <Widget>[
+                              Icon(CupertinoIcons.pencil, color: Colors.white),
+                              Text(
+                                'Edit Profile',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ElevatedButton(onPressed: () {}, 
+                      child: Row(
+                        spacing: 2,
+                        children: [
+                          Icon(Icons.share),
+                          Text('Share'),
+                        ],
+                      )),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
